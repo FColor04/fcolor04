@@ -1,0 +1,8 @@
+footer {
+  @import "../theme";
+
+  display: block;
+  height: 100%;
+  background-color: $primary-900;
+  color: $on-900;
+}

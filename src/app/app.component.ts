@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'fcolor04';
+  static docTitle : Title;
+  static title = 'FColor04 | ';
+  
+  static setTitle (newTitle: string) {
+    AppComponent.docTitle.setTitle(AppComponent.title + newTitle);
+  }
+  
+  constructor(private titleService: Title) {
+    AppComponent.docTitle = titleService;
+  }
 }
