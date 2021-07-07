@@ -1,0 +1,12 @@
+<section>
+	<css-doodle>
+		background-color: @pick(#391e72, #ff0048);
+		@shape: triangle;
+		opacity: @rand(5%, 70%);
+		transform: rotate(@rand(360deg)) scale(0.2);
+		@place-cell: @pick(@rand(0vw, 20vw), @rand(80vw, 100vw)) @rand(0%, 100%);
+	</css-doodle>
+	<div>
+		<ng-content></ng-content>
+	</div>
+</section>

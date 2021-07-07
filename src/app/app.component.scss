@@ -5,4 +5,8 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 4rem auto 8rem;
+  > app-header {
+    position: sticky;
+    top: 0;
+  }
 }

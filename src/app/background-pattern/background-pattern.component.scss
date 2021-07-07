@@ -1,0 +1,23 @@
+section {
+  width: 100%;
+  padding: 0 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  & > div {
+    background-color: white;
+    width: 100%;
+    min-height: 1rem;
+    padding: 3vw;
+  }
+  & > css-doodle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
+}
