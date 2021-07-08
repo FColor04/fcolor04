@@ -1,12 +1,17 @@
 #main-layout {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 4rem auto 8rem;
+  grid-template-rows: 4rem auto 14rem;
   > app-header {
     position: sticky;
     top: 0;
+    z-index: 5;
+  }
+  > app-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
 }

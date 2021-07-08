@@ -6,5 +6,9 @@
 			<li><a routerLinkActive="active" routerLink="/about-me">About me</a></li>
 			<li><a routerLinkActive="active" routerLink="/contact">Contact</a></li>
 		</ul>
+		<button class="hamburger-menu" (click)="HC.toggleHamburger();">
+			<fa-icon [icon]="faBars"></fa-icon>
+		</button>
+		<app-hamburger-menu *ngIf="HC.hamburger" [cb]="HC.toggleHamburger"></app-hamburger-menu>
 	</nav>
 </header>

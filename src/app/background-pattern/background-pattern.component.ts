@@ -12,7 +12,6 @@ export class BackgroundPatternComponent implements OnInit {
 
   ngOnInit(): void {
     const doodle : any = document.querySelector("css-doodle");
-    doodle.grid = `${Math.floor(doodle.offsetWidth / 150)}x${Math.floor(doodle.offsetHeight / 150)}`;
   }
 
 }

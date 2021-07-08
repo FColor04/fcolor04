@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ export class AppComponent {
   
   static setTitle (newTitle: string) {
     AppComponent.docTitle.setTitle(AppComponent.title + newTitle);
+    HeaderComponent.toggleHamburger(false);
   }
   
   constructor(private titleService: Title) {

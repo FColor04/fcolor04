@@ -7,15 +7,23 @@ import { InMemoryCache } from '@apollo/client/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { HeroComponent } from './hero/hero.component';
 import { MyWorkComponent } from './my-work/my-work.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ContactComponent } from './contact/contact.component';
+
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
+
 import { BackgroundPatternComponent } from './background-pattern/background-pattern.component';
+import { ProjectCardComponent } from './project-card/project-card.component';
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HamburgerMenuComponent } from './hamburger-menu/hamburger-menu.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +34,16 @@ import { BackgroundPatternComponent } from './background-pattern/background-patt
     ContactComponent,
     HeaderComponent,
     FooterComponent,
-    BackgroundPatternComponent
+    BackgroundPatternComponent,
+    ProjectCardComponent,
+    HamburgerMenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     GraphQLModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [
     Title,

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import gsap from 'gsap';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -7,16 +8,23 @@ import gsap from 'gsap';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  tl = gsap.timeline();
+  tl = gsap.timeline({ paused: true });
   scrollToggle = false;
+  faBars = faBars;
+  HC = HeaderComponent;
+  static hamburger = false;
+
+  static toggleHamburger = (state ?: boolean) => {
+    HeaderComponent.hamburger = !HeaderComponent.hamburger;
+    if(state != null)
+      HeaderComponent.hamburger = state;
+  }
 
   initNavAnimation = () => {
-    const list = document.querySelector("nav > ul");
-    this.tl.fromTo(list, { width: "30ch" }, { width: "10ch", duration: "2" });
-    // const listItems = document.querySelectorAll('nav > ul > li');
-    // listItems.forEach(item => {
-    //   this.tl.fromTo(item, {  })
-    // });
+    const list = document.querySelector(".nav-list");
+    const name = document.querySelector("#name");
+    this.tl.fromTo(list, { width: "34ch" }, { width: "10ch", duration: "0.1" }, "<")
+    .fromTo(name, { opacity: 1 }, { opacity: 0, duration: "0.3" }, "<");
   }
 
   setScroll = () => {
@@ -24,8 +32,10 @@ export class HeaderComponent implements OnInit {
     this.scrollToggle = (window.scrollY > 0);
     if(this.scrollToggle != oldScrollToggle){
       if(this.scrollToggle){
-        
+        this.tl.play();
+        return;
       }
+      this.tl.reverse();
     }
   }
 
@@ -49,4 +59,4 @@ export class HeaderComponent implements OnInit {
     this.setScroll();
   }
 
-}
+};

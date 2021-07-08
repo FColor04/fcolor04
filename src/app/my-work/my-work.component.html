@@ -2,23 +2,8 @@
 <h1>My work</h1>
 <hr />
 <app-background-pattern>
-	<h2>
-		Lorem ipsum
-	</h2>
-	<p>
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quaerat blanditiis dolorem omnis cum inventore doloribus molestias consequuntur facilis dolore deleniti aperiam ab incidunt corrupti nihil numquam, ullam tempore earum.
-		Sint nemo temporibus sed nisi nihil? Similique voluptate voluptates nulla voluptatum sapiente, eaque asperiores blanditiis qui animi fugiat laudantium minima illum accusantium quod eveniet necessitatibus voluptatem et, maxime quo ipsa?
-		Fuga, quis minus. Similique recusandae sequi qui non eum! Quia culpa facilis tempore sed. Odio animi itaque enim ad impedit obcaecati aliquam qui, beatae, nam porro harum est quasi cumque!
-		Veritatis tenetur sunt sequi blanditiis id natus delectus reprehenderit esse velit voluptate, totam ea sed animi eos repellat dicta deleniti repellendus veniam. Beatae, expedita dolorem fuga nihil possimus fugit tempore!
-		Harum quas, dicta porro molestiae sequi error iusto doloremque velit similique beatae dolore unde perferendis. Cum dicta quaerat quibusdam earum doloremque placeat expedita tenetur facilis? Corrupti ipsam amet quos illo.
-	</p>
-	<h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos, veritatis!</h2>
-	<p>
-		Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam rem sed tenetur quae quia illo fuga expedita iusto consequuntur inventore voluptatem, aspernatur animi blanditiis recusandae id, quidem sequi dicta non!
-		Asperiores illum esse atque facere quaerat dicta perspiciatis, voluptatibus nobis, beatae ipsa unde assumenda, eaque quod tempora quia libero eligendi veniam! Natus labore quaerat deserunt neque odit? Praesentium, repellat architecto.
-		Obcaecati possimus quae iste pariatur veritatis illum inventore totam ipsum sint nobis distinctio expedita non eveniet ea architecto, impedit tempore aliquam laudantium ex provident aperiam. Accusantium nam ipsam natus aliquam.
-		Eligendi obcaecati eos aspernatur eum exercitationem facilis esse ipsam reprehenderit itaque quos culpa omnis reiciendis quia possimus necessitatibus consequuntur autem, perferendis aut iusto incidunt nobis doloribus? Ut at officia pariatur.
-		Dolorem cupiditate aspernatur voluptas dolore expedita temporibus sequi iusto neque et. Modi alias illum autem dignissimos ad eveniet harum repellat? Corporis soluta delectus exercitationem sed est temporibus nihil, facilis harum?
-		Laboriosam non fugit ratione necessitatibus vitae autem quia quis culpa optio nulla doloribus, saepe cumque explicabo veniam at illo aut iste praesentium. Nostrum architecto ratione obcaecati odio dolorem? Quae, vitae.
-	</p>
+	<div >
+		<app-project-card *ngFor="let project of projects; index as i" [img]="project.image.url" [title]="project.title" [source]="project.source" [view]="project.view" [description]="project.description.html" [mirrored]="(i%2) ? true : false" >
+		</app-project-card>
+	</div>
 </app-background-pattern>

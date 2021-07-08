@@ -1,0 +1,18 @@
+<div class="card">
+	<div class="card-description">
+		<img src={{img}} alt="project image" [ngStyle]='{"float": mirrored ? "right" : "left"}' />
+		<h3>
+			{{title}}
+		</h3>
+		<p [innerHTML]="description">
+		</p>
+	</div>
+	<div class="card-button-set">
+		<a *ngIf="source" href={{source}} class="source">
+			<fa-icon [icon]="faGitAlt"></fa-icon>View Source
+		</a>
+		<a *ngIf="view" href={{view}} class="view">
+			<fa-icon [icon]="faEye"></fa-icon>See project
+		</a>
+	</div>
+</div>

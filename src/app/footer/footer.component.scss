@@ -1,8 +1,25 @@
 footer {
   @import "../theme";
 
-  display: block;
-  height: 100%;
-  background-color: $primary-900;
-  color: $on-900;
+  svg {
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 4rem;
+    margin: 0;
+    padding: 0;
+    background-color: $primary-900;
+    color: $on-900;
+  }
 }

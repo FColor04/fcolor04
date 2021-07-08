@@ -1,0 +1,57 @@
+.card {
+  min-width: 10ch;
+  min-height: 10rem;
+  padding: 1rem;
+  margin: 1rem;
+  color: black;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem -0.4rem black;
+  display: grid;
+  grid-template-rows: auto 3rem;
+
+  &-description {
+    padding: 1rem;
+
+    > img {
+      grid-area: a;
+      height: 8rem;
+      width: 8rem;
+      object-fit: cover;
+      margin: 1.5rem;
+      @media screen and (max-width: 900px) {
+        width: 4rem;
+        height: 4rem;
+        margin: 0.5rem;
+      }
+      @media screen and (max-width: 600px) {
+        width: 2rem;
+        height: 2rem;
+        display: inline-block;
+      }
+      box-shadow: 0 0 0 0.5rem white, 0 0 0 0.6rem black;
+    }
+  }
+  &-button-set {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    > a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 12ch;
+      height: 1.5rem;
+      margin: 1rem;
+      text-decoration: none;
+      border: none;
+      color: black;
+      box-shadow: 4px 4px 0px 0px hsl(0, 0%, 18%);
+      &.source {
+        background-color: hsl(24, 60%, 70%);
+      }
+      &.view {
+        background-color: hsl(224, 60%, 70%);
+      }
+    }
+  }
+}
