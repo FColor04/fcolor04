@@ -1,9 +1,8 @@
-#main-layout {
-  width: 100vw;
-  min-height: 100vh;
+:host {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 4rem auto 14rem;
+  min-height: 100vh;
   > app-header {
     position: sticky;
     top: 0;

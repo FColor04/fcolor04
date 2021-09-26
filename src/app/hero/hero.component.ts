@@ -26,6 +26,7 @@ export class HeroComponent implements OnInit, OnDestroy {
   currentHook: string = "";
   currentImage: string = "";
   tl = gsap.timeline();
+  fontSize: number = 32;
 
   private querySubscription!: Subscription;
 

@@ -1,9 +1,9 @@
 <div id="hero-img-container">
 	<img id="hero-img" alt="" src={{hero?.image?.url}}>
-	<span class="intro">
+	<span [style.font-size.px]="fontSize" class="intro">
 		My name is Marcin
 	</span>
-	<span id="hook">
+	<span [style.font-size.px]="fontSize" id="hook">
 		I can make you:
 		<div class="typewriter">
 			<span class="anim-typewriter"></span>
